@@ -2,8 +2,12 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const Index = (props) => {
+    const drinkArr = props.product.filter(obj => (
+        obj.type === "drink"
+    ))
+
     const loaded = () => {
-        return props.product.map(product => (
+        return drinkArr.map(product => (
             <div key={product._id} className="product">
                 <img src={product.img} alt={product.title} />
                 <h3>{product.title}</h3>
