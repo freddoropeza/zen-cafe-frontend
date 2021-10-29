@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-const Index = (props) => {
+const Drink = (props) => {
     const drinkArr = props.product.filter(obj => (
         obj.type === "drink"
     ))
@@ -25,4 +25,4 @@ const Index = (props) => {
     )
 }
 
-export default Index;
+export default Drink;

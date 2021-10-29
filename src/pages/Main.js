@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Route, Switch, Redirect, Link } from 'react-router-dom';
 import Drink from './Drinks';
+import Snow from './Snow';
 
 const Main = (props) => {
     const [ product, setProduct ] = useState([]);
@@ -20,6 +21,9 @@ const Main = (props) => {
             <Switch>
                 <Route exact path="/">
                     <Drink product={product} />
+                </Route>
+                <Route path="/snow">
+                    <Snow product={product} />
                 </Route>
             </Switch>
         </main>
