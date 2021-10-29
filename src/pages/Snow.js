@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Snow = (props) => {
     const snowArr = props.product.filter(obj => (
         obj.type === "snow"
@@ -17,6 +19,12 @@ const Snow = (props) => {
 
     return (
         <section>
+            <Link to="/">
+                <h1>Drinks</h1>
+            </Link>
+            <Link to="/snow">
+                <h1>Snow Cream</h1>
+            </Link>
             { props.product ? loaded() : loading() }
         </section>
     )

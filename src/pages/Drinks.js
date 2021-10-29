@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+// import { Link } from 'react-router-dom';
+// import { useState } from 'react';
+
+import { Link } from "react-router-dom";
 
 const Drink = (props) => {
     const drinkArr = props.product.filter(obj => (
@@ -20,6 +22,12 @@ const Drink = (props) => {
 
     return (
         <section>
+            <Link to="/">
+                <h1>Drinks</h1>
+            </Link>
+            <Link to="/snow">
+                <h1>Snow Cream</h1>
+            </Link>
             { props.product ? loaded() : loading() }
         </section>
     )
