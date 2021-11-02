@@ -6,7 +6,7 @@ import Cart from './Cart';
 
 const Main = (props) => {
     const [ product, setProduct ] = useState([]);
-    const [ cartItems, setCartItems ] = useState([]);
+    const [ cartItems, setCartItems] = useState([]);
 
     const BASE_URL = "http://localhost:3001/";
 

@@ -4,11 +4,12 @@ import './App.css';
 import Cart from "./components/Cart";
 
 function App() {
+
   return (
     <div className="App">
       <Header />
       <Main />
-      <Cart />
+      {/* <Cart /> */}
     </div>
   );
 }
