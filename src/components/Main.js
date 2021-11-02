@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Route, Switch, Redirect, Link } from 'react-router-dom';
-import Drink from './Drinks';
-import Snow from './Snow';
+import Drink from '../pages/Drinks';
+import Snow from '../pages/Snow';
 
 const Main = (props) => {
     const [ product, setProduct ] = useState([]);
