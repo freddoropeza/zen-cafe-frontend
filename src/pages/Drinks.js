@@ -1,9 +1,9 @@
 // import { Link } from 'react-router-dom';
-// import { useState } from 'react';
-
 import { Link } from "react-router-dom";
 
 const Drink = (props) => {
+    const {onAdd} = props; 
+
     const drinkArr = props.product.filter(obj => (
         obj.type === "drink"
     ))
@@ -16,7 +16,7 @@ const Drink = (props) => {
                 <p>{product.description}</p>
                 <p>${product.price}</p>
                 <div>
-                    <button>Add To Cart</button>
+                    <button onClick={() => onAdd(product)}>Add To Cart</button>
                 </div>
             </div>
         ))

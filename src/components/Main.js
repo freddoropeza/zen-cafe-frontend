@@ -18,17 +18,43 @@ const Main = (props) => {
 
     useEffect(() => getProduct(), [])
 
+    const onAdd = (product) => {
+        const exist = cartItems.find(x => x._id === product._id);
+        if(exist) {
+            setCartItems(
+                cartItems.map((x) => 
+                    x._id === product._id ? {...exist, qty: exist.qty +1} : x
+                )
+            )
+        } else {
+            setCartItems([...cartItems, {...product, qty: 1}])
+        }
+    }
+
+    const onRemove = (product) => {
+        const exist = cartItems.find((x) => x.id === product.id);
+        if (exist.qty === 1) {
+          setCartItems(cartItems.filter((x) => x.id !== product.id));
+        } else {
+          setCartItems(
+            cartItems.map((x) =>
+              x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+            )
+          );
+        }
+    };
+
     return (
         <main>
             <Switch>
                 <Route exact path="/">
-                    <Drink product={product} />
+                    <Drink onAdd={onAdd} onRemove={onRemove} product={product} />
                 </Route>
                 <Route path="/snow">
-                    <Snow product={product} />
+                    <Snow onAdd={onAdd} onRemove={onRemove} product={product} />
                 </Route>
                 <Route path="/cart">
-                    <Cart cartItems={cartItems} />
+                    <Cart onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} />
                 </Route>
             </Switch>
         </main>

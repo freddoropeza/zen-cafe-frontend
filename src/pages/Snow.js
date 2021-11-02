@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 const Snow = (props) => {
+    const {onAdd} = props; 
+
     const snowArr = props.product.filter(obj => (
         obj.type === "snow"
     ))
@@ -13,7 +15,7 @@ const Snow = (props) => {
                 <p>{product.description}</p>
                 <p>${product.price}</p>
                 <div>
-                    <button>Add To Cart</button>
+                    <button onClick={() => onAdd(product)}>Add To Cart</button>
                 </div>
             </div>
         ))
