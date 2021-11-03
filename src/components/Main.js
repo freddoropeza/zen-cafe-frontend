@@ -8,7 +8,7 @@ const Main = (props) => {
     const [ product, setProduct ] = useState([]);
     const [ cartItems, setCartItems] = useState([]);
 
-    const BASE_URL = "http://localhost:3001/";
+    const BASE_URL = "https://zen-cafe-backend.herokuapp.com/";
 
     const getProduct = async () => {
         const response = await fetch(BASE_URL)
