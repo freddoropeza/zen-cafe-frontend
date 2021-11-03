@@ -1,5 +1,6 @@
 const Cart = (props) => {
     const { cartItems, onAdd, onRemove } = props;
+    const totalPrice = cartItems.reduce((a, current) => a + current.price * current.qty, 0);
     
     return (
         <section>
@@ -17,6 +18,11 @@ const Cart = (props) => {
                     </div>
                 </div>
             ))}
+            {cartItems.length !==0 && (
+                <div className="total">Total Price:
+                    <strong> ${totalPrice}</strong>
+                </div>
+            )}
         </section>
     )
 }

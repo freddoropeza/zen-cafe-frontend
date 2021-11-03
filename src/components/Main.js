@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Route, Switch, Redirect, Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Drink from '../pages/Drinks';
 import Snow from '../pages/Snow';
 import Cart from './Cart';
