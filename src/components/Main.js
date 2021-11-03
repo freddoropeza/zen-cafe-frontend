@@ -23,7 +23,7 @@ const Main = (props) => {
         if(exist) {
             setCartItems(
                 cartItems.map((x) => 
-                    x._id === product._id ? {...exist, qty: exist.qty +1} : x
+                    x._id === product._id ? {...exist, qty: exist.qty + 1 } : x
                 )
             )
         } else {
@@ -32,15 +32,15 @@ const Main = (props) => {
     }
 
     const onRemove = (product) => {
-        const exist = cartItems.find((x) => x.id === product.id);
+        const exist = cartItems.find((x) => x._id === product._id);
         if (exist.qty === 1) {
-          setCartItems(cartItems.filter((x) => x.id !== product.id));
+            setCartItems(cartItems.filter((x) => x._id !== product._id));
         } else {
-          setCartItems(
-            cartItems.map((x) =>
-              x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
-            )
-          );
+            setCartItems(
+                cartItems.map((x) =>
+                    x._id === product._id ? { ...exist, qty: exist.qty - 1 } : x
+                )
+            );
         }
     };
 

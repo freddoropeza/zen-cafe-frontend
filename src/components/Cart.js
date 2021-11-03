@@ -1,6 +1,5 @@
 const Cart = (props) => {
     const { cartItems, onAdd, onRemove } = props;
-    console.log(cartItems.length)
     
     return (
         <section>
