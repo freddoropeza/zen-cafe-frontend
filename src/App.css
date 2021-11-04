@@ -7,11 +7,19 @@ Header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0 5px;
   min-height: 8vh;
 }
 
 .logo {
   border-radius: 100%;
+  padding-left: 5px;
 }
 
+.cart {
+  padding-right: 25px;
+  font-size: x-large;
+}
+
+.cartBtn {
+  font-size: x-large;
+}

@@ -7,10 +7,10 @@ const Header = (props) => {
         <Link to="/">
             <img className="logo" src="https://i.ibb.co/kXNxW17/zencafelogo.jpg" alt="logo"></img>
         </Link>
-        <Link to="/cart">
+        <Link className="cart" to="/cart">
             Cart{' '}
             {countCartItems ? (
-                <button>{countCartItems}</button>
+                <button className="cartBtn">{countCartItems}</button>
             ) : (
                 ''
             )}
