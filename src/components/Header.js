@@ -5,7 +5,7 @@ const Header = (props) => {
     return (
       <header className="Header">
         <Link to="/">
-            <h1>Zen Cafe</h1>
+            <img className="logo" src="https://i.ibb.co/kXNxW17/zencafelogo.jpg" alt="logo"></img>
         </Link>
         <Link to="/cart">
             Cart{' '}
