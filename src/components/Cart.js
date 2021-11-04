@@ -2,6 +2,10 @@ const Cart = (props) => {
     const { cartItems, onAdd, onRemove } = props;
     const totalPrice = cartItems.reduce((a, current) => a + current.price * current.qty, 0);
     
+    const checkOut = () => {
+        alert("Thank you for your purchase!");
+    }
+
     return (
         <section>
             <h1>Items in Cart</h1>
@@ -22,6 +26,13 @@ const Cart = (props) => {
                 <div className="total">Total Price:
                     <strong> ${totalPrice}</strong>
                 </div>
+            )}
+            {cartItems.length !==0 && (
+                <form onSubmit={checkOut}>
+                    <div className="checkOut">
+                        <button type="submit">Check Out</button>
+                    </div>
+                </form>
             )}
         </section>
     )
