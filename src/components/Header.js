@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom'
 
 const Header = (props) => {
-    const { countCartItems } =props;
+    const { countCartItems } = props;
     return (
       <header className="Header">
         <Link to="/">
             <h1>Zen Cafe</h1>
         </Link>
         <Link to="/cart">
-            <h3>Cart</h3> {" "}
-            {countCartItems? (
+            Cart{' '}
+            {countCartItems ? (
                 <button>{countCartItems}</button>
             ) : (
-                " "
+                ''
             )}
         </Link>
       </header>
