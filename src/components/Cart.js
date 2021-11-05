@@ -7,9 +7,9 @@ const Cart = (props) => {
     }
 
     return (
-        <section>
+        <section className="cartMain">
             <h1>Items in Cart</h1>
-            <div>{cartItems.length === 0 && <div>Cart is Empty</div>}</div>
+            <div className="emptyCart">{cartItems.length === 0 && <div>Cart is Empty :(</div>}</div>
             {cartItems.map((item) => (
                 <div key={item._id} className="cartProduct">
                     <div>{item.title}</div>

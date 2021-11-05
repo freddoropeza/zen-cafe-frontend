@@ -11,7 +11,7 @@ const Drink = (props) => {
     const loaded = () => {
         return drinkArr.map(product => (
             <div key={product._id} className="product">
-                <img src={product.img} alt={product.title} />
+                <img className="productImg" src={product.img} alt={product.title} />
                 <h3>{product.title}</h3>
                 <p>{product.description}</p>
                 <p>${product.price}</p>
@@ -31,7 +31,7 @@ const Drink = (props) => {
                     <h1 className="drinksUndeline">Drinks</h1>
                 </Link>
                 <Link to="/snow">
-                    <h1>Snow Cream</h1>
+                    <h1>Shaved Snow</h1>
                 </Link>
             </div>
             <section className="drinks">

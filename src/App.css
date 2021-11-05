@@ -38,3 +38,40 @@ a, a:hover {
 .drinksUndeline, .snowsUndeline {
   text-decoration: underline;
 }
+
+main {
+  min-height: 68vh;
+  
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.product {
+  margin: 5px;
+  text-align: center;
+}
+
+.productImg {
+  height: 18rem;
+}
+
+.cartMain {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
+}
+
+.cartProduct {
+  padding: 8px;
+}
+
+.emptyCart {
+  padding: 10px;
+}
