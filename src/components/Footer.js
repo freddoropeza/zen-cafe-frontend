@@ -1,7 +1,7 @@
 const Footer = (props) => {
     return (
       <footer className="footer">
-        <p>Opening Soon!</p>
+        <p>New Location Opening Soon!</p>
       </footer>
     );
   } 
