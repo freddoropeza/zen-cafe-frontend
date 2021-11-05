@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 const Drink = (props) => {
@@ -25,15 +25,19 @@ const Drink = (props) => {
     const loading = () => <h1>Loading ...</h1>;
 
     return (
-        <section>
-            <Link to="/">
-                <h1>Drinks</h1>
-            </Link>
-            <Link to="/snow">
-                <h1>Snow Cream</h1>
-            </Link>
-            { props.product ? loaded() : loading() }
-        </section>
+        <Fragment>
+            <div className="drinksLinks">
+                <Link to="/">
+                    <h1 className="drinksUndeline">Drinks</h1>
+                </Link>
+                <Link to="/snow">
+                    <h1>Snow Cream</h1>
+                </Link>
+            </div>
+            <section className="drinks">
+                { props.product ? loaded() : loading() }
+            </section>
+        </Fragment>
     )
 }
 

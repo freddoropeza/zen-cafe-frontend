@@ -10,6 +10,12 @@ Header {
   min-height: 8vh;
 }
 
+a, a:hover {
+  text-decoration: none;
+  border: none;
+  color: black;
+}
+
 .logo {
   border-radius: 100%;
   padding-left: 5px;
@@ -22,4 +28,13 @@ Header {
 
 .cartBtn {
   font-size: x-large;
+}
+
+.drinksLinks, .snowsLinks {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.drinksUndeline, .snowsUndeline {
+  text-decoration: underline;
 }
