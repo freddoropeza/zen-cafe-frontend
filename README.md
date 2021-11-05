@@ -2,6 +2,7 @@
 Your one stop shop to view and order you favorite drinks and ice cream from Zen Cafe. 
 
 ## Screenshot
+![Alt Text](https://i.ibb.co/9ZNFWg4/image.png)
 
 ## Built With 
 - MongoDB
